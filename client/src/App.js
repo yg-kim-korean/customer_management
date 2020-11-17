@@ -22,7 +22,7 @@ const styles = theme => ({
 const customers = [{
   'id' : 1,
   'img' : 'https://placeimg.com/64/64/1',
-  'name' : 'yg',
+  'name' : 'yg', 
   'birthday' : '12334',
   'gender' : '남',
   'job': 'ㄷㄷㄷ'
