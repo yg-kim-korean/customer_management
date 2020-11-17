@@ -1,3 +1,7 @@
+# Management System
+유튜브 강의를 통해 만든 고객관리 시스템
+https://www.youtube.com/channel/UChflhu32f5EUHlY7_SetNWw
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
