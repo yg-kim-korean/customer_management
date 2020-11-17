@@ -101,4 +101,4 @@ md server
 root폴더에서
 yarn add concurrently
 package.json파일
-"server": "cd server && yarn start",
+
