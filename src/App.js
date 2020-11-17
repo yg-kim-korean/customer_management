@@ -1,7 +1,24 @@
 import './App.css';
 import React, { Component } from 'react';
 import Customer from './components/Customer';
+import Paper from '@material-ui/core/Paper';
+import Table from '@material-ui/core/Table';
+import TableHead from '@material-ui/core/TableHead';
+import TableBody from '@material-ui/core/TableBody';
+import TableRow from '@material-ui/core/TableRow';
+import TableCell from '@material-ui/core/TableCell';
+import {withStyles} from '@material-ui/core/styles';
 
+const styles = theme => ({
+  root: {
+    width : '100',
+    marginTop: theme.spacing(3),
+    overflowX: "auto"
+  },
+  table:{
+    minWidth:1080
+  }
+})
 const customers = [{
   'id' : 1,
   'img' : 'https://placeimg.com/64/64/1',
@@ -30,8 +47,9 @@ const customers = [{
 
 class App extends Component{
   render(){
+    const { classes } = this.props;
     return (
-      <div>
+      <Paper className = {classes.root}>
           {/* <Customer 
             name = {customers[0].name}
             birthday={customers[0].birthday}
@@ -56,6 +74,18 @@ class App extends Component{
             id = {customers[2].id}
             img = {customers[2].img}
           /> */}
+          <Table className={classes.table}>
+            <TableHead>
+              <TableRow>
+                <TableCell>번호</TableCell>
+                <TableCell>사진</TableCell>
+                <TableCell>이름</TableCell>
+                <TableCell>생일</TableCell>
+                <TableCell>성별</TableCell>
+                <TableCell>직업</TableCell>
+              </TableRow>
+            </TableHead>
+            <TableBody>
           {
             customers.map(c =>{
                 return(
@@ -71,9 +101,11 @@ class App extends Component{
               );
             })
           }
-      </div>
+          </TableBody>
+          </Table>
+      </Paper>
     );
   }
 }
 
-export default App;
+export default withStyles(styles)(App);
